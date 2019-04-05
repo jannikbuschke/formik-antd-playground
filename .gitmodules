@@ -1,0 +1,3 @@
+[submodule "formik-antd"]
+	path = formik-antd
+	url = https://github.com/jannikbuschke/formik-antd.git
