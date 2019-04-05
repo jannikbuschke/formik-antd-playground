@@ -1,0 +1,13 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap --hoist",
+    "tsc": "lerna run tsc",
+    "watch": "lerna run watch",
+    "start": "lerna run start"
+  },
+  "devDependencies": {
+    "lerna": "3.13.1"
+  }
+}
