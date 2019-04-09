@@ -3,7 +3,7 @@
 When cloning this repository include the --recursive flag. I.e.
 
 ```
-git clone https://github.com/jannikbuschke/formik-antd-playground --recursivce
+git clone https://github.com/jannikbuschke/formik-antd-playground --recursive
 ```
 
 In the root folder execute
