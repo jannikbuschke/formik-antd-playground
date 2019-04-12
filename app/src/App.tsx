@@ -17,25 +17,15 @@ import {
   SelectField
 } from "@jbuschke/formik-antd";
 import { Formik } from "formik";
-import { Divider, Button } from "antd";
+import { Divider, Button, message, notification, Form, Radio } from "antd";
 import "./App.css";
 import "antd/dist/antd.css";
+import { Header } from "./Header";
 
 function App() {
   return (
     <div>
-      <div className="Header">
-        <h1>
-          <a href="https://ant.design" target="_blank">
-            Formik
-          </a>{" "}
-          +{" "}
-          <a href="https://github.com/jaredpalmer/formik" target="_blank">
-            Ant Design
-          </a>
-        </h1>
-        <h2>Antd components that are connected to Formik</h2>
-      </div>
+      <Header />
       <Formik
         initialValues={{
           userName: "",
