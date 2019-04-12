@@ -1,23 +1,20 @@
 import * as React from "react";
 import { render } from "react-dom";
 import {
-  CheckboxField,
-  InputField,
-  InputPasswordField,
-  InputNumberField,
-  SwitchField,
-  TextAreaField,
-  DatePickerField,
-  RadioGroupField,
+  Checkbox,
+  Input,
+  InputNumber,
+  Switch,
+  DatePicker,
+  Radio,
   FormikDebug,
   FormItem,
   ResetButton,
   SubmitButton,
-  CheckboxGroupField,
-  SelectField
+  Select
 } from "@jbuschke/formik-antd";
 import { Formik } from "formik";
-import { Divider, Button, message, notification, Form, Radio } from "antd";
+import { Button, notification } from "antd";
 import "./App.css";
 import "antd/dist/antd.css";
 import { Header } from "./Header";
@@ -75,33 +72,38 @@ function App() {
               <SubmitButton>Submit (when dirty & valid)</SubmitButton>
               <SubmitButton disabled={false}>Submit</SubmitButton>
             </Button.Group>
-            <InputField name="email" />
+            <Input name="email" />
             <FormItem name="userName">
-              <InputField name="userName" />
+              <Input name="userName" />
             </FormItem>
-            <InputField name="items[0]name" />
-            <InputField name="website" addonBefore="https://" />
-            <InputPasswordField name="password" />
-            <TextAreaField name="description" />
-            <InputNumberField name="index" />
-            <InputNumberField
+            <Input name="items[0]name" />
+            <Input name="website" addonBefore="https://" />
+            <Input.Password name="password" />
+            <Input.TextArea name="description" />
+            <InputNumber name="index" />
+            <InputNumber
               name="dollars"
               formatter={(value: any) => `$ ${value}`}
             />
-            <CheckboxField name="applyForNewsletter">Newsletter</CheckboxField>
+            <Checkbox name="applyForNewsletter">Newsletter</Checkbox>
             <div>
-              <SwitchField name="applyForNewsletter" />
+              <Switch name="applyForNewsletter" />
             </div>
-            <DatePickerField name="date" />
-            <RadioGroupField
+            <DatePicker name="date" />
+            <Radio.Group
               name="radioGroup"
               options={[
                 { label: "item 1", value: "1" },
                 { label: "item 2", value: 2 },
-                { label: "item 3", value: "2" }
+                { label: "item 3", value: "3" }
               ]}
             />
-            <CheckboxGroupField
+            <Radio.Group name="radioGroup" defaultValue="a" size="small">
+              <Radio.Button value="1">Hangzhou</Radio.Button>
+              <Radio.Button value={2}>Shanghai</Radio.Button>
+              <Radio.Button value="3">Beijing</Radio.Button>
+            </Radio.Group>
+            <Checkbox.Group
               name="checkboxGroup"
               options={[
                 { label: "item 1", value: "1" },
@@ -109,8 +111,8 @@ function App() {
                 { label: "item 3", value: "3" }
               ]}
             />
-            <SelectField name="select" style={{ width: "100%" }}>
-              {SelectField.renderOptions([
+            <Select name="select" style={{ width: "100%" }}>
+              {Select.renderOptions([
                 { label: "displayed value", value: 2 },
                 {
                   label: <h1>hello world</h1>,
@@ -122,7 +124,7 @@ function App() {
                   label: "child"
                 }
               ])}
-            </SelectField>
+            </Select>
           </div>
 
           <FormikDebug style={{ maxWidth: 400 }} />
