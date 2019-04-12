@@ -8,14 +8,13 @@ import {
   SwitchField,
   TextAreaField,
   DatePickerField,
-  DateTimeAsStringField,
   RadioGroupField,
-  ArrayEditor,
   FormikDebug,
   FormItem,
   ResetButton,
   SubmitButton,
-  CheckboxGroupField
+  CheckboxGroupField,
+  SelectField
 } from "@jbuschke/formik-antd";
 import { Formik } from "formik";
 import { Divider, Button } from "antd";
@@ -84,7 +83,7 @@ function App() {
               <span>with formatter</span>
               <InputNumberField
                 name="dollars"
-                formatter={value => `$ ${value}`}
+                formatter={(value: any) => `$ ${value}`}
               />
               <span>Checkbox</span>
               <div>
@@ -100,7 +99,7 @@ function App() {
               <span>RadioGroup</span>
               <RadioGroupField
                 name="radioGroup"
-                dataSource={[
+                options={[
                   { label: "Val 1", value: "val1" },
                   { label: "5", value: 5 }
                 ]}
@@ -125,6 +124,23 @@ function App() {
               <FormItem name="userName">
                 <InputField name="userName" />
               </FormItem>
+              <h3 style={{ gridColumnStart: 1, gridColumnEnd: 3 }}>
+                SelectField
+              </h3>
+              <SelectField name="select" style={{ width: "100%" }}>
+                {SelectField.renderOptions([
+                  { label: "displayed value", value: 2 },
+                  {
+                    label: <h1>hello world</h1>,
+                    value: "123"
+                  },
+                  {
+                    disabled: true,
+                    value: "123",
+                    label: "child"
+                  }
+                ])}
+              </SelectField>
             </div>
           </div>
           <Divider type="vertical" style={{ height: "100%" }} />
