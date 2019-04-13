@@ -72,8 +72,12 @@ function App() {
             >
               <Button.Group>
                 <ResetButton>Reset</ResetButton>
-                <SubmitButton>Submit (when dirty & valid)</SubmitButton>
-                <SubmitButton disabled={false}>Submit</SubmitButton>
+                <SubmitButton onClick={() => {}}>
+                  Submit (when dirty & valid)
+                </SubmitButton>
+                <SubmitButton onClick={() => {}} disabled={false}>
+                  Submit
+                </SubmitButton>
               </Button.Group>
               <Input name="email" />
               <FormItem name="userName">
