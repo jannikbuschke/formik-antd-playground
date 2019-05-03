@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Button } from "antd";
 export const Header = () => (
   <div className="Header">
     <h1>
@@ -11,5 +12,13 @@ export const Header = () => (
       </a>
     </h1>
     <h2>Simple declarative bindings</h2>
+    <Button type="primary">
+      <a
+        href="https://www.github.com/jannikbuschke/formik-antd"
+        target="_blank"
+      >
+        Github
+      </a>
+    </Button>
   </div>
 );
