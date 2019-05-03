@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button } from "antd";
+import { Button, Icon } from "antd";
 export const Header = () => (
   <div className="Header">
     <h1>
@@ -12,13 +12,23 @@ export const Header = () => (
       </a>
     </h1>
     <h2>Simple declarative bindings</h2>
-    <Button type="primary">
-      <a
-        href="https://www.github.com/jannikbuschke/formik-antd"
-        target="_blank"
-      >
-        Github
-      </a>
-    </Button>
+    <Button.Group>
+      <Button type="primary">
+        <a
+          href="https://www.github.com/jannikbuschke/formik-antd"
+          target="_blank"
+        >
+          Github <Icon type="github" />
+        </a>
+      </Button>
+      <Button>
+        <a
+          href="https://www.twitter.com/jannikbuschke"
+          target="_blank"
+        >
+          Twitter <Icon type="twitter" />
+        </a>
+      </Button>
+    </Button.Group>
   </div>
 );
