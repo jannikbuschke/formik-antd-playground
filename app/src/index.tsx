@@ -16,15 +16,18 @@ import {
   AutoComplete,
   Rate,
   Slider,
-  Cascader
+  Cascader,
+  TreeSelect
 } from "@jbuschke/formik-antd";
 import { Formik } from "formik";
-import { Button, notification, Icon, Input as $Input } from "antd";
+import { Button, notification, Icon, TreeSelect as $TreeSelect, Tabs } from "antd";
 import { Header } from "./Header";
 import "./index.css";
 import "antd/dist/antd.css";
 import { generatePassword } from "./utils";
-import { AgendaItemMasterDetail } from "./items";
+import { SampleForm } from "./SampleForm";
+
+const { TreeNode } = $TreeSelect;
 
 function App() {
   return (
@@ -165,6 +168,17 @@ function App() {
             }],
           }]}
             name="cascader" />
+          <TreeSelect name="treeselect">
+            <TreeNode value="parent 1" title="parent 1" key="0-1">
+              <TreeNode value="parent 1-0" title="parent 1-0" key="0-1-1">
+                <TreeNode value="leaf1" title="my leaf" key="random" />
+                <TreeNode value="leaf2" title="your leaf" key="random1" />
+              </TreeNode>
+              <TreeNode value="parent 1-1" title="parent 1-1" key="random2">
+                <TreeNode value="sss" title={<b style={{ color: '#08c' }}>sss</b>} key="random3" />
+              </TreeNode>
+            </TreeNode>
+          </TreeSelect>
           <Button.Group size="large">
             <ResetButton>Reset</ResetButton>
             <SubmitButton type="primary" disabled={false}>
