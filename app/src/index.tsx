@@ -195,10 +195,15 @@ function App() {
 
 const rootElement = document.getElementById("root");
 render(
-  <div>
-    <Header />
-    <App />
+  <Tabs defaultActiveKey="1">
+    <Tabs.TabPane tab="Overview" key="1">
+      <Header />
+      <App />
+    </Tabs.TabPane>
+    <Tabs.TabPane tab="Sample Form" key="2">
+      <SampleForm />
+    </Tabs.TabPane>
     {/* <AgendaItemMasterDetail /> */}
-  </div>,
-  rootElement
+  </Tabs>
+  , rootElement
 );
