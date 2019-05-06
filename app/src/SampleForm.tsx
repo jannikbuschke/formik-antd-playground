@@ -28,10 +28,7 @@ export const SampleForm = () => {
           </Button.Group>
 
           <FormItem name="firstName" label="Firstname">
-            <Input name="firstName" placeholder="Firstname" validate={val => {
-              console.log("validate", val);
-              return (val !== null && val !== undefined) ? "ok" : ""
-            }} />
+            <Input name="firstName" placeholder="Firstname" />
           </FormItem>
           <FormItem name="lastName" label="Lastname">
             <Input name="lastName" placeholder="Lastname" />
@@ -39,7 +36,7 @@ export const SampleForm = () => {
           <FormItem name="email" label="Email">
             <Input name="email" placeholder="Email" />
           </FormItem>
-          <FormItem name="password" label="Password">
+          <FormItem name="password" label="Password" validateStatus={undefined /* Currently showing validation success is buggy */} >
             <Input.Password name="password" placeholder="Password" />
           </FormItem>
           <FormItem name="newsletter">
