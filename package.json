@@ -4,10 +4,12 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist",
     "tsc": "lerna run tsc",
+    "build": "lerna run build",
     "watch": "lerna run watch --stream",
     "start": "lerna run start --stream"
   },
   "devDependencies": {
     "lerna": "3.13.1"
-  }
+  },
+  "dependencies": {}
 }
