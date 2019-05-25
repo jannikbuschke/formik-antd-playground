@@ -3,20 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@jbuschke/formik-antd": "0.14.0",
-    "antd": "3.16.6",
+    "@jbuschke/formik-antd": "1.0.0-preview.6",
+    "antd": "3.18.2",
+    "formik": "1.5.7",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-scripts": "2.1.8"
+  },
+  "devDependencies": {
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "4.3.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "jest-dom": "3.2.2",
+    "prettier": "1.17.1",
+    "react-testing-library": "7.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "react-scripts eject",
+    "prettier:check": "prettier --check src/**/*.tsx",
+    "prettier": "prettier --write src/**/*.tsx package.json"
   },
   "browserslist": [
     ">0.2%",
