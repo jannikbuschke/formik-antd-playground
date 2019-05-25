@@ -23,8 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier:check": "prettier --check src/**/*.tsx",
-    "prettier": "prettier --write src/**/*.tsx package.json"
+    "prettier": "prettier --write src/**/*.* package.json"
   },
   "browserslist": [
     ">0.2%",
