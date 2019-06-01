@@ -67,23 +67,8 @@ function App() {
           : undefined;
       }}
       render={() => <Form>
-        <div
-          style={{
-            display: "flex",
-            marginLeft: "auto",
-            marginRight: "auto",
-            maxWidth: 850,
-            gridTemplateColumns: "1fr 1fr"
-          }}
-        >
-          <div
-            style={{
-              display: "grid",
-              gridGap: 5,
-              margin: 5,
-              height: "100%"
-            }}
-          >
+        <div className="container">
+          <div className="component-container">
             <Input name="email" />
             <FormItem name="userName">
               <Input name="userName" />
