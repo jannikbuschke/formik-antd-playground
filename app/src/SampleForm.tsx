@@ -18,8 +18,7 @@ export const SampleForm = () => {
         }
         return {}
       }}
-    >
-      <Form style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+      render={() => <Form style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
         <div>
           <Button.Group style={{ marginBottom: 20 }}>
             <ResetButton>Reset</ResetButton>
@@ -29,7 +28,7 @@ export const SampleForm = () => {
           <FormItem name="firstName" label="Firstname">
             <Input name="firstName" placeholder="Firstname" />
           </FormItem>
-          <FormItem name="lastName" label="Lastname">
+          <FormItem name="lastName" label="Lastname" required={true}>
             <Input name="lastName" placeholder="Lastname" />
           </FormItem>
           <FormItem name="email" label="Email">
@@ -44,6 +43,6 @@ export const SampleForm = () => {
         </div>
         <FormikDebug />
       </Form>
-    </Formik>
+      } />
   </div>
 }

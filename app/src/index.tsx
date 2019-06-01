@@ -17,7 +17,8 @@ import {
   Rate,
   Slider,
   Cascader,
-  TreeSelect
+  TreeSelect,
+  Transfer
 } from "@jbuschke/formik-antd";
 import { Formik } from "formik";
 import { Button, notification, Icon, TreeSelect as $TreeSelect, Tabs } from "antd";
@@ -70,7 +71,7 @@ function App() {
           display: "flex",
           marginLeft: "auto",
           marginRight: "auto",
-          maxWidth: 800,
+          maxWidth: 850,
           gridTemplateColumns: "1fr 1fr"
         }}
       >
@@ -82,6 +83,7 @@ function App() {
             height: "100%"
           }}
         >
+
           <Input name="email" />
           <FormItem name="userName">
             <Input name="userName" />
@@ -137,7 +139,29 @@ function App() {
               { label: "item 3", value: "3" }
             ]}
           />
-          <Select name="select" style={{ width: "100%" }}>
+          <Select name="select1" style={{ width: "100%" }} placeholder="Simple select">
+            <Select.Option value={1}>item 1</Select.Option>
+            <Select.Option value={2}>item 2</Select.Option>
+            <Select.Option value={3}>item 3</Select.Option>
+          </Select>
+          <Select name="select2" style={{ width: "100%" }} placeholder="Select multiple" mode="multiple">
+            <Select.Option value={1}>item 1</Select.Option>
+            <Select.Option value={2}>item 2</Select.Option>
+            <Select.Option value={3}>item 3</Select.Option>
+          </Select>
+          <Select name="select3" style={{ width: "100%" }} placeholder="Select with groups">
+            <Select.OptGroup label="group 1">
+              <Select.Option value={1}>item 1</Select.Option>
+              <Select.Option value={2}>item 2</Select.Option>
+              <Select.Option value={3}>item 3</Select.Option>
+            </Select.OptGroup>
+            <Select.OptGroup label="group 2">
+              <Select.Option value={4}>item 4</Select.Option>
+              <Select.Option value={5}>item 5</Select.Option>
+              <Select.Option value={6}>item 6</Select.Option>
+            </Select.OptGroup>
+          </Select>
+          <Select name="select4" style={{ width: "100%" }} placeholder="Select with renderOptions() helper">
             {Select.renderOptions([
               { label: "foo" },
               { label: <h3>bar</h3>, value: 2 },
@@ -167,8 +191,10 @@ function App() {
               }],
             }],
           }]}
-            name="cascader" />
-          <TreeSelect name="treeselect">
+            name="cascader"
+            placeholder="Cascader"
+          />
+          <TreeSelect name="treeselect" placeholder="Treeselect">
             <TreeNode value="parent 1" title="parent 1" key="0-1">
               <TreeNode value="parent 1-0" title="parent 1-0" key="0-1-1">
                 <TreeNode value="leaf1" title="my leaf" key="random" />
@@ -179,6 +205,11 @@ function App() {
               </TreeNode>
             </TreeNode>
           </TreeSelect>
+          <Transfer
+            name="transfer"
+            dataSource={[{ key: "1", title: "item 1", }, { key: "2", title: "item 2" }, { key: "3", title: "item 3", }]}
+            render={item => item.title}
+          />
           <Button.Group size="large">
             <ResetButton>Reset</ResetButton>
             <SubmitButton type="primary" disabled={false}>
