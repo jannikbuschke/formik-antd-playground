@@ -3,7 +3,6 @@ import { Formik } from "formik";
 import { SubmitButton, Input, Checkbox, ResetButton, FormikDebug, Form, FormItem } from "@jbuschke/formik-antd";
 import { message, Button } from "antd";
 
-
 export const SampleForm = () => {
   return <div style={{ marginTop: 80, maxWidth: 700, marginRight: "auto", marginLeft: "auto" }}>
     <Formik
