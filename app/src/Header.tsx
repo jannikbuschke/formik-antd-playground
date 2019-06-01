@@ -5,8 +5,10 @@ export const Header = () => (
     <h1>
       <a href="https://ant.design" target="_blank">
         Formik
-      </a>{" "}
-      +{" "}
+      </a>
+      {" "}
+      <span role="img" aria-label="handshake">🤝</span>
+      {" "}
       <a href="https://github.com/jaredpalmer/formik" target="_blank">
         Ant Design
       </a>
