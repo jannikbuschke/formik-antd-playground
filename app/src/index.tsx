@@ -22,14 +22,12 @@ import {
   Form
 } from "@jbuschke/formik-antd";
 import { Formik } from "formik";
-import { Button, notification, Icon, TreeSelect as $TreeSelect, Tabs } from "antd";
+import { Button, notification, Icon, TreeSelect as $TreeSelect, Tabs, DatePicker as $DatePicker } from "antd";
 import { Header } from "./Header";
 import "./index.css";
 import "antd/dist/antd.css";
 import { generatePassword } from "./utils";
 import { SampleForm } from "./SampleForm";
-
-const { TreeNode } = $TreeSelect;
 
 function App() {
   return (
@@ -102,6 +100,9 @@ function App() {
             </div>
             <TimePicker name="time" />
             <DatePicker name="date" showTime={true} />
+            <DatePicker.RangePicker name="range" placeholder={["Rangepicker", "Rangepicker"]} />
+            <DatePicker.WeekPicker name="week" placeholder="WeekPicker" />
+            <DatePicker.MonthPicker name="month" placeholder="MonthPicker" />
             <Radio.Group
               name="radioGroup"
               options={[
@@ -179,21 +180,21 @@ function App() {
               name="cascader"
               placeholder="Cascader"
             />
-            <TreeSelect name="treeselect" placeholder="Treeselect">
-              <TreeNode value="parent 1" title="parent 1" key="0-1">
-                <TreeNode value="parent 1-0" title="parent 1-0" key="0-1-1">
-                  <TreeNode value="leaf1" title="my leaf" key="random" />
-                  <TreeNode value="leaf2" title="your leaf" key="random1" />
-                </TreeNode>
-                <TreeNode value="parent 1-1" title="parent 1-1" key="random2">
-                  <TreeNode value="sss" title={<b style={{ color: '#08c' }}>sss</b>} key="random3" />
-                </TreeNode>
-              </TreeNode>
+            <TreeSelect name="treeselect" placeholder="Treeselect" >
+              <TreeSelect.TreeNode value="parent 1" title="parent 1" key="0-1">
+                <TreeSelect.TreeNode value="parent 1-0" title="parent 1-0" key="0-1-1">
+                  <TreeSelect.TreeNode value="leaf1" title="my leaf" key="random" />
+                  <TreeSelect.TreeNode value="leaf2" title="your leaf" key="random1" />
+                </TreeSelect.TreeNode>
+                <TreeSelect.TreeNode value="parent 1-1" title="parent 1-1" key="random2">
+                  <TreeSelect.TreeNode value="sss" title={<b style={{ color: '#08c' }}>sss</b>} key="random3" />
+                </TreeSelect.TreeNode>
+              </TreeSelect.TreeNode>
             </TreeSelect>
             <Transfer
               name="transfer"
               dataSource={[{ key: "1", title: "item 1", }, { key: "2", title: "item 2" }, { key: "3", title: "item 3", }]}
-              render={item => item.title}
+              render={(item: any) => item.title}
             />
             <Button.Group size="large">
               <ResetButton>Reset</ResetButton>
