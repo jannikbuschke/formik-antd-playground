@@ -76,6 +76,7 @@ function App() {
             <Input.TextArea name="description" />
             <AutoComplete
               name="auto"
+              placeholder="Autocomplete"
               dataSource={["Berlin", "Amsterdam", "Paris"]}
               showArrow={true}
             />

@@ -3,13 +3,13 @@ import { Button, Icon } from "antd";
 export const Header = () => (
   <div className="Header">
     <h1>
-      <a href="https://ant.design" target="_blank">
+      <a href="https://github.com/jaredpalmer/formik" target="_blank">
         Formik
       </a>
       {" "}
-      <span role="img" aria-label="handshake">🤝</span>
+      <span role="img" aria-label="link">🔗</span>
       {" "}
-      <a href="https://github.com/jaredpalmer/formik" target="_blank">
+      <a href="https://ant.design" target="_blank">
         Ant Design
       </a>
     </h1>
