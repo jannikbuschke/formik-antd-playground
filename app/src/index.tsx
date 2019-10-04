@@ -25,7 +25,6 @@ import { Formik } from "formik";
 import { Button, notification, Icon, TreeSelect as $TreeSelect, Tabs, DatePicker as $DatePicker } from "antd";
 import { Header } from "./Header";
 import "./index.css";
-import "antd/dist/antd.css";
 import { generatePassword } from "./utils";
 import { SampleForm } from "./SampleForm";
 
