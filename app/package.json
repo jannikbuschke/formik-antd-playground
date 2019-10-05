@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@jbuschke/formik-antd": "1.5.0",
+    "@jbuschke/formik-antd": "1.5.1",
     "antd": "3.23.5",
     "formik": "1.5.8",
     "react": "16.10.2",

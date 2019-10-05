@@ -78,6 +78,7 @@ function App() {
               placeholder="Autocomplete"
               dataSource={["Berlin", "Amsterdam", "Paris"]}
               showArrow={true}
+              allowClear={true}
             />
             <Rate name="rate" allowHalf={true} allowClear={true} />
             <Rate
