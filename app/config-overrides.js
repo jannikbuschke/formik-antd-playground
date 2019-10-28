@@ -8,7 +8,7 @@ module.exports = override(
     }),
     fixBabelImports('formik-antd',
         {
-            libraryName: '@jbuschke/formik-antd',
+            libraryName: 'formik-antd',
             style: "css",
             libraryDirectory: 'es'
         },

@@ -20,8 +20,8 @@ import {
   TreeSelect,
   Transfer,
   Form
-} from "@jbuschke/formik-antd";
-import { Formik } from "formik";
+} from "formik-antd";
+import { Formik, FieldArray } from "formik";
 import { Button, notification, Icon, TreeSelect as $TreeSelect, Tabs, DatePicker as $DatePicker } from "antd";
 import { Header } from "./Header";
 import "./index.css";

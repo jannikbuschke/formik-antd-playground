@@ -9,7 +9,7 @@
     "start": "lerna run start --stream"
   },
   "devDependencies": {
-    "lerna": "3.13.1"
+    "lerna": "3.18.3"
   },
   "dependencies": {}
 }

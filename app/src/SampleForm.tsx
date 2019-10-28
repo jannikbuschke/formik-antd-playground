@@ -1,7 +1,15 @@
-import * as React from "react";
-import { Formik } from "formik";
-import { SubmitButton, Input, Checkbox, ResetButton, FormikDebug, Form, FormItem } from "@jbuschke/formik-antd";
-import { message, Button } from "antd";
+import * as React from "react"
+import { Formik } from "formik"
+import {
+  SubmitButton,
+  Input,
+  Checkbox,
+  ResetButton,
+  FormikDebug,
+  Form,
+  FormItem,
+} from "formik-antd"
+import { message, Button } from "antd"
 
 function validateRequired(value: string) {
   return value? undefined: "required"
