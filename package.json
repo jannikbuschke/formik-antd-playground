@@ -3,13 +3,12 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist",
-    "tsc": "lerna run tsc",
+    "tsc": "lerna run tsc --stream",
     "build": "lerna run build",
     "watch": "lerna run watch --stream",
     "start": "lerna run start --stream"
   },
   "devDependencies": {
-    "lerna": "3.18.3"
-  },
-  "dependencies": {}
+    "lerna": "3.19.0"
+  }
 }
