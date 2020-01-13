@@ -1,7 +1,7 @@
 {
   "packages": [
     "formik-antd",
-    "app"
+    "formik-antd-example"
   ],
   "version": "0.0.0"
 }
